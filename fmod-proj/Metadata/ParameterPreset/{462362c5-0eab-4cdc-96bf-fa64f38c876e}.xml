@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{462362c5-0eab-4cdc-96bf-fa64f38c876e}">
+		<property name="name">
+			<value>Burning</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5860be96-851d-4bf8-9986-77d3a317013e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9c8cc230-5478-4e5b-baae-e259308a964d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9c8cc230-5478-4e5b-baae-e259308a964d}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

@@ -28,6 +28,8 @@ public class Player : MonoBehaviour, IKitchenObjectParent {
     private BaseCounter selectedCounter;
     private KitchenObject kitchenObject;
 
+    [SerializeField] private FMODUnity.StudioEventEmitter eventEmitter;
+    private bool walkingAudioPlaying;
 
     private void Awake() {
         if (Instance != null) {
@@ -132,6 +134,17 @@ public class Player : MonoBehaviour, IKitchenObjectParent {
         }
 
         isWalking = moveDir != Vector3.zero;
+
+        switch (isWalking)
+        {
+            case true when !walkingAudioPlaying:
+                eventEmitter.Play();
+                break;
+            case false when walkingAudioPlaying:
+                eventEmitter.Stop();
+                break;
+        }
+        walkingAudioPlaying = isWalking;
 
         float rotateSpeed = 10f;
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);

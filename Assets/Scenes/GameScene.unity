@@ -10081,6 +10081,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   kitchenObjectHoldPoint: {fileID: 1805620533}
+  eventEmitter: {fileID: 1470862848}
 --- !u!4 &1470862847
 Transform:
   m_ObjectHideFlags: 0
@@ -10114,22 +10115,22 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1490401881
-      Data2: 1078113560
-      Data3: 1961186692
-      Data4: 429868178
-    Path: event:/Player/player rolling event
+      Data1: 1583983447
+      Data2: 1266461564
+      Data3: -2006651008
+      Data4: -1660091174
+    Path: event:/test
   Event: 
-  EventPlayTrigger: 1
-  EventStopTrigger: 2
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1 &1473747765
 GameObject:
   m_ObjectHideFlags: 0
@@ -14406,6 +14407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 283e9dcb4e0664f4da794527af9276ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamePlayingTimerMax: 1
 --- !u!4 &2029274087
 Transform:
   m_ObjectHideFlags: 0
