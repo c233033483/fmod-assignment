@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{23229a6f-da8e-4b10-bd76-9bd51b5b260f}">
+	<object class="AudioFile" id="{429de45f-c73a-45dd-89a1-836d6994d8c6}">
 		<property name="assetPath">
-			<value>Food Sounds/sizzle_start.wav</value>
+			<value>Food Sounds/Chopping sounds/chop_5.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>48</value>
 		</property>
 		<property name="channelCount">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.919092970521542</value>
+			<value>0.35675000000000001</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{e70406a8-c841-4cd4-8fa1-b5da1ee35116}</destination>

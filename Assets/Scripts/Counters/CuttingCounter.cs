@@ -19,7 +19,8 @@ public class CuttingCounter : BaseCounter, IHasProgress {
 
     [SerializeField] private CuttingRecipeSO[] cuttingRecipeSOArray;
 
-
+    [SerializeField] private FMODUnity.StudioEventEmitter chopSoundEmitter;
+    
     private int cuttingProgress;
 
 
@@ -63,6 +64,8 @@ public class CuttingCounter : BaseCounter, IHasProgress {
         if (HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().GetKitchenObjectSO())) {
             // There is a KitchenObject here AND it can be cut
             cuttingProgress++;
+            
+            chopSoundEmitter.Play();
 
             OnCut?.Invoke(this, EventArgs.Empty);
             OnAnyCut?.Invoke(this, EventArgs.Empty);

@@ -32,7 +32,8 @@ public class StoveCounter : BaseCounter, IHasProgress {
     private float burningTimer;
     private BurningRecipeSO burningRecipeSO;
 
-
+    [SerializeField] private FMODUnity.StudioEventEmitter fryingAudioEmitter;
+    
     private void Start() {
         state = State.Idle;
     }
@@ -44,7 +45,7 @@ public class StoveCounter : BaseCounter, IHasProgress {
                     break;
                 case State.Frying:
                     fryingTimer += Time.deltaTime;
-
+                    
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs {
                         progressNormalized = fryingTimer / fryingRecipeSO.fryingTimerMax
                     });
@@ -66,7 +67,7 @@ public class StoveCounter : BaseCounter, IHasProgress {
                     break;
                 case State.Fried:
                     burningTimer += Time.deltaTime;
-
+                    
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs {
                         progressNormalized = burningTimer / burningRecipeSO.burningTimerMax
                     });
@@ -92,8 +93,29 @@ public class StoveCounter : BaseCounter, IHasProgress {
                     break;
             }
         }
+        
+        print(state.ToString());
+        SetAudioState(state);
     }
-
+    
+    private void SetAudioState(State state) {
+        switch (state) {
+            case State.Frying:
+                if (!fryingAudioEmitter.IsPlaying()) {
+                    fryingAudioEmitter.Play();
+                }
+                fryingAudioEmitter.EventInstance.setParameterByName("Burning", 0f);
+                break;
+            case State.Fried:
+                fryingAudioEmitter.EventInstance.setParameterByName("Burning", 1f);
+                break;
+            case State.Burned:
+            case State.Idle:
+                fryingAudioEmitter.Stop();
+                break;
+        }
+    }
+    
     public override void Interact(Player player) {
         if (!HasKitchenObject()) {
             // There is no KitchenObject here

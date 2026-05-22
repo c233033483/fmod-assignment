@@ -46,6 +46,24 @@ MonoBehaviour:
   lastModified: 639149071434465965
   FileSizes: []
   Exists: 1
+--- !u!114 &-5502061355496927816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/food.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD/Desktop/food.bank
+  Name: food
+  StudioPath: bank:/food
+  lastModified: 639150892537590722
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4540187011934189271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,19 +124,24 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 5633745361532054882}
   - {fileID: 3088126232041597045}
+  - {fileID: -5502061355496927816}
   EditorEvents:
-  - {fileID: 380887536483285209}
+  - {fileID: 7726294522043082819}
+  - {fileID: 2541344555332237852}
+  - {fileID: 8065555945616066163}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3088126232041597045}
   StringsBanks:
   - {fileID: 5633745361532054882}
   cacheVersion: 131859
-  cacheTime: 639149082180428013
+  cacheTime: 639150892538199863
   SerializableEventsDict:
-  - key: event:/Player/player rolling event
+  - key: event:/pan-sizzling
     index: 0
---- !u!114 &380887536483285209
+  - key: event:/player-rolling
+    index: 1
+--- !u!114 &2541344555332237852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,23 +151,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/test
+  m_Name: event:/Cooking Events/chopping
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/test
+  Path: event:/Cooking Events/chopping
   Guid:
-    Data1: 1583983447
-    Data2: 1266461564
-    Data3: -2006651008
-    Data4: -1660091174
+    Data1: -479648573
+    Data2: 1106714456
+    Data3: 901291448
+    Data4: -1910384670
   Banks:
-  - {fileID: 3088126232041597045}
+  - {fileID: -5502061355496927816}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 5477
+  Length: 0
 --- !u!114 &3088126232041597045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +183,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639149082180392937
+  lastModified: 639150892538184426
   FileSizes: []
   Exists: 1
 --- !u!114 &5633745361532054882
@@ -178,10 +201,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639149082180428013
+  lastModified: 639150892538199863
   FileSizes:
   - Name: 
-    Value: 754
+    Value: 994
   Exists: 1
 --- !u!114 &5982427111339135192
 MonoBehaviour:
@@ -203,3 +226,82 @@ MonoBehaviour:
   - Name: 
     Value: 872
   Exists: 1
+--- !u!114 &6447259957833893420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/pan-sizzling/Burning
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: Burning
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1134878127
+    data2: 467083487
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7726294522043082819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cooking Events/pan-sizzling
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Cooking Events/pan-sizzling
+  Guid:
+    Data1: 865530231
+    Data2: 1153197691
+    Data3: -1980464249
+    Data4: -2077570111
+  Banks:
+  - {fileID: -5502061355496927816}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6447259957833893420}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 63981
+--- !u!114 &8065555945616066163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player Events/player-rolling
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player Events/player-rolling
+  Guid:
+    Data1: 1583983447
+    Data2: 1266461564
+    Data3: -2006651008
+    Data4: -1660091174
+  Banks:
+  - {fileID: 3088126232041597045}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5477

@@ -571,6 +571,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1468207217}
     m_Modifications:
+    - target: {fileID: 7137127581541984116, guid: a4dff8531227b78498023fe357c3cc52,
+        type: 3}
+      propertyPath: fryingAudioEmitter
+      value: 
+      objectReference: {fileID: 1234814029}
     - target: {fileID: 9092307958401991096, guid: a4dff8531227b78498023fe357c3cc52,
         type: 3}
       propertyPath: m_RootOrder
@@ -635,7 +640,11 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 490172027316127643, guid: a4dff8531227b78498023fe357c3cc52, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9092307958401991098, guid: a4dff8531227b78498023fe357c3cc52,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1234814029}
   m_SourcePrefab: {fileID: 100100000, guid: a4dff8531227b78498023fe357c3cc52, type: 3}
 --- !u!4 &259125502 stripped
 Transform:
@@ -1568,6 +1577,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1468207217}
     m_Modifications:
+    - target: {fileID: 2575188641521100930, guid: 60cfa5d58cf68ef48be68971ea06a06c,
+        type: 3}
+      propertyPath: copSoundEmitter
+      value: 
+      objectReference: {fileID: 1567826074}
+    - target: {fileID: 2575188641521100930, guid: 60cfa5d58cf68ef48be68971ea06a06c,
+        type: 3}
+      propertyPath: chopSoundEmitter
+      value: 
+      objectReference: {fileID: 1567826074}
     - target: {fileID: 2616519799646705744, guid: 60cfa5d58cf68ef48be68971ea06a06c,
         type: 3}
       propertyPath: m_Name
@@ -1631,7 +1650,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2616519799646705744, guid: 60cfa5d58cf68ef48be68971ea06a06c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1567826074}
   m_SourcePrefab: {fileID: 100100000, guid: 60cfa5d58cf68ef48be68971ea06a06c, type: 3}
 --- !u!4 &491516434 stripped
 Transform:
@@ -4384,6 +4407,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1468207217}
     m_Modifications:
+    - target: {fileID: 2575188641521100930, guid: 60cfa5d58cf68ef48be68971ea06a06c,
+        type: 3}
+      propertyPath: copSoundEmitter
+      value: 
+      objectReference: {fileID: 2130302133}
+    - target: {fileID: 2575188641521100930, guid: 60cfa5d58cf68ef48be68971ea06a06c,
+        type: 3}
+      propertyPath: chopSoundEmitter
+      value: 
+      objectReference: {fileID: 2130302133}
     - target: {fileID: 2616519799646705744, guid: 60cfa5d58cf68ef48be68971ea06a06c,
         type: 3}
       propertyPath: m_Name
@@ -4447,7 +4480,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2616519799646705744, guid: 60cfa5d58cf68ef48be68971ea06a06c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2130302133}
   m_SourcePrefab: {fileID: 100100000, guid: 60cfa5d58cf68ef48be68971ea06a06c, type: 3}
 --- !u!1001 &817631442
 PrefabInstance:
@@ -7314,6 +7351,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   container: {fileID: 1859791383}
   recipeTemplate: {fileID: 222579507}
+--- !u!1 &1234814027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9092307958401991098, guid: a4dff8531227b78498023fe357c3cc52,
+    type: 3}
+  m_PrefabInstance: {fileID: 259125501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1234814029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234814027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 865530231
+      Data2: 1153197691
+      Data3: -1980464249
+      Data4: -2077570111
+    Path: event:/pan-sizzling
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1249319259
 GameObject:
   m_ObjectHideFlags: 0
@@ -7518,6 +7592,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2654306017924495880, guid: b9a204b921b53ac47bd6a50ce639c502,
     type: 3}
   m_PrefabInstance: {fileID: 969869729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1289526114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9092307958401991098, guid: a4dff8531227b78498023fe357c3cc52,
+    type: 3}
+  m_PrefabInstance: {fileID: 1821366987}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1290678787
 PrefabInstance:
@@ -10119,7 +10199,7 @@ MonoBehaviour:
       Data2: 1266461564
       Data3: -2006651008
       Data4: -1660091174
-    Path: event:/test
+    Path: event:/player-rolling
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -10129,8 +10209,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1473747765
 GameObject:
   m_ObjectHideFlags: 0
@@ -10912,6 +10992,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1470862846}
+--- !u!1 &1567826071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2616519799646705744, guid: 60cfa5d58cf68ef48be68971ea06a06c,
+    type: 3}
+  m_PrefabInstance: {fileID: 491516433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1567826074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567826071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -479648573
+      Data2: 1106714456
+      Data3: 901291448
+      Data4: -1910384670
+    Path: event:/Cooking Events/chopping
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1576255758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13058,6 +13175,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1468207217}
     m_Modifications:
+    - target: {fileID: 7137127581541984116, guid: a4dff8531227b78498023fe357c3cc52,
+        type: 3}
+      propertyPath: fryingAudioEmitter
+      value: 
+      objectReference: {fileID: 1821366991}
     - target: {fileID: 9092307958401991096, guid: a4dff8531227b78498023fe357c3cc52,
         type: 3}
       propertyPath: m_RootOrder
@@ -13122,7 +13244,11 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 490172027316127643, guid: a4dff8531227b78498023fe357c3cc52, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9092307958401991098, guid: a4dff8531227b78498023fe357c3cc52,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1821366991}
   m_SourcePrefab: {fileID: 100100000, guid: a4dff8531227b78498023fe357c3cc52, type: 3}
 --- !u!4 &1821366988 stripped
 Transform:
@@ -13130,11 +13256,48 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1821366987}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1821366991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289526114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 865530231
+      Data2: 1153197691
+      Data3: -1980464249
+      Data4: -2077570111
+    Path: event:/pan-sizzling
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1824180424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2654306017924495880, guid: b9a204b921b53ac47bd6a50ce639c502,
     type: 3}
   m_PrefabInstance: {fileID: 973902429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1828007994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2616519799646705744, guid: 60cfa5d58cf68ef48be68971ea06a06c,
+    type: 3}
+  m_PrefabInstance: {fileID: 810370367}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1840169414
 GameObject:
@@ -14407,7 +14570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 283e9dcb4e0664f4da794527af9276ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamePlayingTimerMax: 1
+  gamePlayingTimerMax: 1000
 --- !u!4 &2029274087
 Transform:
   m_ObjectHideFlags: 0
@@ -15017,6 +15180,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 810370367}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2130302133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828007994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -479648573
+      Data2: 1106714456
+      Data3: 901291448
+      Data4: -1910384670
+    Path: event:/Cooking Events/chopping
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2134970788
 GameObject:
   m_ObjectHideFlags: 0
