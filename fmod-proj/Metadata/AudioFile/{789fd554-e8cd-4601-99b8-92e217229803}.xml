@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{789fd554-e8cd-4601-99b8-92e217229803}">
+		<property name="assetPath">
+			<value>UI Sounds/start_countdown.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>3.9416553287981859</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e70406a8-c841-4cd4-8fa1-b5da1ee35116}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -12,10 +12,13 @@ public class MainMenuUI : MonoBehaviour {
 
 
     private void Awake() {
-        playButton.onClick.AddListener(() => {
+        playButton.onClick.AddListener(() =>
+        {
+            UIAudio.Instance.PlayUISound(UISound.Click);
             Loader.Load(Loader.Scene.GameScene);
-        });
+        }); 
         quitButton.onClick.AddListener(() => {
+            UIAudio.Instance.PlayUISound(UISound.Back);
             Application.Quit();
         });
 

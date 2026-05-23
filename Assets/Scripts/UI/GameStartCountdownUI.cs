@@ -15,7 +15,7 @@ public class GameStartCountdownUI : MonoBehaviour {
 
     private Animator animator;
     private int previousCountdownNumber;
-
+    [SerializeField] private FMODUnity.EventReference countdownSound;
     
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -33,6 +33,13 @@ public class GameStartCountdownUI : MonoBehaviour {
         } else {
             Hide();
         }
+        
+        if (KitchenGameManager.Instance.IsGamePlaying()) {
+            var instance = FMODUnity.RuntimeManager.CreateInstance(countdownSound);
+            instance.setParameterByName("Countdown", 0);
+            instance.start();
+            instance.release();
+        }
     }
 
     private void Update() {
@@ -42,7 +49,14 @@ public class GameStartCountdownUI : MonoBehaviour {
         if (previousCountdownNumber != countdownNumber) {
             previousCountdownNumber = countdownNumber;
             animator.SetTrigger(NUMBER_POPUP);
-            //play countdown sound
+            
+            
+            var instance = FMODUnity.RuntimeManager.CreateInstance(countdownSound);
+            instance.setParameterByName("Countdown", countdownNumber);
+            instance.start();
+            instance.release();
+            
+            print (countdownNumber);
         }
     }
 

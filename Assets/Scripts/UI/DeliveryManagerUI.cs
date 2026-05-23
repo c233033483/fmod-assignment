@@ -7,7 +7,8 @@ public class DeliveryManagerUI : MonoBehaviour {
 
     [SerializeField] private Transform container;
     [SerializeField] private Transform recipeTemplate;
-
+    
+    [SerializeField] private FMODUnity.EventReference recipeSpawnSound;
 
     private void Awake() {
         recipeTemplate.gameObject.SetActive(false);
@@ -26,6 +27,7 @@ public class DeliveryManagerUI : MonoBehaviour {
 
     private void DeliveryManager_OnRecipeSpawned(object sender, System.EventArgs e) {
         UpdateVisual();
+        FMODUnity.RuntimeManager.PlayOneShot(recipeSpawnSound);
     }
 
     private void UpdateVisual() {

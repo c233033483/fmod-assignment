@@ -55,6 +55,7 @@ public class TutorialUI : MonoBehaviour {
     }
 
     private void Hide() {
+        UIAudio.Instance.PlayUISound(UISound.Back);
         gameObject.SetActive(false);
     }
 }

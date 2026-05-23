@@ -19,6 +19,7 @@ public class GamePauseUI : MonoBehaviour {
             Loader.Load(Loader.Scene.MainMenuScene);
         });
         optionsButton.onClick.AddListener(() => {
+            UIAudio.Instance.PlayUISound(UISound.Click);
             Hide();
             OptionsUI.Instance.Show(Show);
         });
@@ -33,10 +34,12 @@ public class GamePauseUI : MonoBehaviour {
 
     private void KitchenGameManager_OnGameUnpaused(object sender, System.EventArgs e) {
         Hide();
+        UIAudio.Instance.PlayUISound(UISound.Click);
     }
 
     private void KitchenGameManager_OnGamePaused(object sender, System.EventArgs e) {
         Show();
+        UIAudio.Instance.PlayUISound(UISound.Back);
     }
 
     private void Show() {

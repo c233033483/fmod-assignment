@@ -19,8 +19,6 @@ public class OptionsUI : MonoBehaviour {
     [SerializeField] private Button gamepadInteractButton;
     [SerializeField] private Button gamepadInteractAlternateButton;
     [SerializeField] private Button gamepadPauseButton;
-    [SerializeField] private TextMeshProUGUI soundEffectsText;
-    [SerializeField] private TextMeshProUGUI musicText;
     [SerializeField] private TextMeshProUGUI moveUpText;
     [SerializeField] private TextMeshProUGUI moveDownText;
     [SerializeField] private TextMeshProUGUI moveLeftText;
@@ -40,6 +38,7 @@ public class OptionsUI : MonoBehaviour {
     private void Awake() {
         Instance = this;
         closeButton.onClick.AddListener(() => {
+            UIAudio.Instance.PlayUISound(UISound.Back);
             Hide();
             onCloseButtonAction();
         });
@@ -94,10 +93,12 @@ public class OptionsUI : MonoBehaviour {
     }
 
     private void ShowPressToRebindKey() {
+        UIAudio.Instance.PlayUISound(UISound.Click);
         pressToRebindKeyTransform.gameObject.SetActive(true);
     }
 
     private void HidePressToRebindKey() {
+        UIAudio.Instance.PlayUISound(UISound.Back);
         pressToRebindKeyTransform.gameObject.SetActive(false);
     }
 
