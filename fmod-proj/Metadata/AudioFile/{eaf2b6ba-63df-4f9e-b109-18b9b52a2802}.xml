@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{eaf2b6ba-63df-4f9e-b109-18b9b52a2802}">
+		<property name="assetPath">
+			<value>Food Sounds/Chopping sounds/knife_draw.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.28862500000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e70406a8-c841-4cd4-8fa1-b5da1ee35116}</destination>
+		</relationship>
+	</object>
+</objects>

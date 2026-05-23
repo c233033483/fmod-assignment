@@ -783,6 +783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315904674}
   - component: {fileID: 315904673}
+  - component: {fileID: 315904675}
   m_Layer: 0
   m_Name: DeliveryManager
   m_TagString: Untagged
@@ -803,6 +804,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipeListSO: {fileID: 11400000, guid: a893d166c0c71024883f98211bdcabba, type: 2}
+  orderSoundEvent:
+    Guid:
+      Data1: 1868861783
+      Data2: 1294782809
+      Data3: 516343721
+      Data4: -748499028
+    Path: event:/Player Events/order-submit
 --- !u!4 &315904674
 Transform:
   m_ObjectHideFlags: 0
@@ -818,6 +826,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &315904675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315904672}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1868861783
+      Data2: 1294782809
+      Data3: 516343721
+      Data4: -748499028
+    Path: event:/Player Events/order-submit
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params:
+  - Name: OrderStatus
+    Value: 0
+  - Name: OrderStreak
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,6 +1756,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerImage: {fileID: 725351735}
+--- !u!1 &501292351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7333252385162279237, guid: c5985096f1f739248958053599bd37df,
+    type: 3}
+  m_PrefabInstance: {fileID: 1411726310}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519105286
 GameObject:
   m_ObjectHideFlags: 0
@@ -9241,6 +9290,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1468207217}
     m_Modifications:
+    - target: {fileID: 5975593561060770033, guid: c5985096f1f739248958053599bd37df,
+        type: 3}
+      propertyPath: binSoundEmitter
+      value: 
+      objectReference: {fileID: 1411726313}
     - target: {fileID: 7333252385162279237, guid: c5985096f1f739248958053599bd37df,
         type: 3}
       propertyPath: m_Name
@@ -9304,7 +9358,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7333252385162279237, guid: c5985096f1f739248958053599bd37df,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1411726313}
   m_SourcePrefab: {fileID: 100100000, guid: c5985096f1f739248958053599bd37df, type: 3}
 --- !u!4 &1411726311 stripped
 Transform:
@@ -9312,6 +9370,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1411726310}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1411726313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501292351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1624487345
+      Data2: 1157296277
+      Data3: -991571311
+      Data4: -1515735730
+    Path: event:/Player Events/binning
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1417851761
 GameObject:
   m_ObjectHideFlags: 3
@@ -10136,6 +10225,7 @@ GameObject:
   - component: {fileID: 1470862847}
   - component: {fileID: 1470862846}
   - component: {fileID: 1470862848}
+  - component: {fileID: 1470862849}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10199,7 +10289,7 @@ MonoBehaviour:
       Data2: 1266461564
       Data3: -2006651008
       Data4: -1660091174
-    Path: event:/player-rolling
+    Path: event:/Player Events/player-rolling
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -10211,6 +10301,32 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &1470862849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470862845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7faa5c5a57534a42b69cec59d0000e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAudioManager
+  pickUpSound:
+    Guid:
+      Data1: 1880534371
+      Data2: 1157225386
+      Data3: 1084512413
+      Data4: -713267150
+    Path: event:/Player Events/pickup
+  putDownSounda:
+    Guid:
+      Data1: 2113922333
+      Data2: 1273829346
+      Data3: 1209216426
+      Data4: 420891800
+    Path: event:/Player Events/putdown
 --- !u!1 &1473747765
 GameObject:
   m_ObjectHideFlags: 0

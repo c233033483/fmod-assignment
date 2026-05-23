@@ -7,6 +7,7 @@ public class PlateKitchenObject : KitchenObject {
 
 
     public event EventHandler<OnIngredientAddedEventArgs> OnIngredientAdded;
+
     public class OnIngredientAddedEventArgs : EventArgs {
         public KitchenObjectSO kitchenObjectSO;
     }
@@ -35,8 +36,11 @@ public class PlateKitchenObject : KitchenObject {
 
             OnIngredientAdded?.Invoke(this, new OnIngredientAddedEventArgs {
                 kitchenObjectSO = kitchenObjectSO
-            });
-
+            }
+            );
+            
+            print("put on plate");
+            
             return true;
         }
     }

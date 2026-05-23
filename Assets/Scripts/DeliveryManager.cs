@@ -24,12 +24,15 @@ public class DeliveryManager : MonoBehaviour {
     private int waitingRecipesMax = 4;
     private int successfulRecipesAmount;
 
+    [SerializeField] private FMODUnity.EventReference orderSoundEvent;
+    private int orderStreak;
 
     private void Awake() {
         Instance = this;
 
 
         waitingRecipeSOList = new List<RecipeSO>();
+        orderStreak = 0;
     }
 
     private void Update() {
@@ -75,7 +78,14 @@ public class DeliveryManager : MonoBehaviour {
                     // Player delivered the correct recipe!
 
                     successfulRecipesAmount++;
-
+                    
+                    FMOD.Studio.EventInstance audioInstance = FMODUnity.RuntimeManager.CreateInstance(orderSoundEvent);
+                    audioInstance.setParameterByName("OrderStatus", 0);
+                    audioInstance.setParameterByName("OrderStreak", orderStreak);
+                    audioInstance.start();
+                    audioInstance.release();
+                    orderStreak++;
+                    
                     waitingRecipeSOList.RemoveAt(i);
 
                     OnRecipeCompleted?.Invoke(this, EventArgs.Empty);
@@ -85,9 +95,18 @@ public class DeliveryManager : MonoBehaviour {
             }
         }
 
+        orderStreak = 0;
+        FMOD.Studio.EventInstance audioInstance2 = FMODUnity.RuntimeManager.CreateInstance(orderSoundEvent);
+        audioInstance2.setParameterByName("OrderStatus", 1);
+        audioInstance2.setParameterByName("OrderStreak", 0);
+        audioInstance2.start();
+        audioInstance2.release();
+        
         // No matches found!
         // Player did not deliver a correct recipe
         OnRecipeFailed?.Invoke(this, EventArgs.Empty);
+        
+        
     }
 
     public List<RecipeSO> GetWaitingRecipeSOList() {

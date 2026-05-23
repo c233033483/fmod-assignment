@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{179383ce-189c-49e5-a8d8-effb488fa132}">
+		<property name="assetPath">
+			<value>Player Sounds/Pickup sounds/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e70406a8-c841-4cd4-8fa1-b5da1ee35116}</destination>
+		</relationship>
+	</object>
+</objects>

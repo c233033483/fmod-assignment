@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{809a7a1b-decb-4981-ad62-07b1130e3699}">
+		<property name="name">
+			<value>OrderStreak</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5860be96-851d-4bf8-9986-77d3a317013e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d41e6378-4db5-4f36-a82b-790debeb3da7}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d41e6378-4db5-4f36-a82b-790debeb3da7}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>11</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

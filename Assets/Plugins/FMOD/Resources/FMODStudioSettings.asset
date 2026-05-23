@@ -563,6 +563,7 @@ MonoBehaviour:
   - Master
   Banks:
   - food
+  - Player Sounds
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
