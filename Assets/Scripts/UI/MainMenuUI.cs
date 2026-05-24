@@ -23,6 +23,8 @@ public class MainMenuUI : MonoBehaviour {
         });
 
         Time.timeScale = 1f;
+        
+        MusicManager.Instance.SetMusicState("Title");
     }
 
 }

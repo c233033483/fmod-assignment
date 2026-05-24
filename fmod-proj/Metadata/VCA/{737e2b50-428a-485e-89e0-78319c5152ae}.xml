@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="SnapshotList" id="{502f8b77-be02-41e9-b362-30550493f92f}">
-		<relationship name="items">
-			<destination>{9b19a127-ddf7-44d6-846f-796e6a17a0a4}</destination>
-		</relationship>
+	<object class="MixerVCA" id="{737e2b50-428a-485e-89e0-78319c5152ae}">
+		<property name="name">
+			<value>Music</value>
+		</property>
 		<relationship name="mixer">
 			<destination>{a3d029f2-1211-4743-814c-eaa8dfdf9a95}</destination>
 		</relationship>

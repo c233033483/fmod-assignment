@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{a70dc817-fb5b-40fd-b917-0be83a008850}">
 		<property name="name">
-			<value>Parameter 1</value>
+			<value>MusicState</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5860be96-851d-4bf8-9986-77d3a317013e}</destination>
@@ -16,15 +16,16 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>4</value>
 		</property>
 		<property name="enumerationLabels">
+			<value>Title</value>
 			<value>Normal</value>
 			<value>Rush</value>
 			<value>Chaos</value>
 		</property>
 		<property name="initialValue">
-			<value>0</value>
+			<value>1</value>
 		</property>
 	</object>
 </objects>

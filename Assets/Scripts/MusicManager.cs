@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class MusicManager : MonoBehaviour
 {
@@ -11,11 +7,18 @@ public class MusicManager : MonoBehaviour
     [SerializeField] private FMODUnity.EventReference musicEvent;
     private FMOD.Studio.EventInstance musicInstance;
 
+    private int burningCount = 0;
+    
     private void Awake() 
     {
         Instance = this;
         musicInstance = FMODUnity.RuntimeManager.CreateInstance(musicEvent);
         musicInstance.start();
+    }
+    
+    private void Start() {
+        StoveCounter.OnAnyStateChanged += StoveCounter_OnAnyStateChanged;
+        DeliveryManager.Instance.OnRecipeSuccess += DeliveryManager_OnRecipeSuccess;
     }
     
     public void SetMusicState(string state) 
@@ -27,5 +30,15 @@ public class MusicManager : MonoBehaviour
     {
         musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         musicInstance.release();
+    }
+    
+    private void StoveCounter_OnAnyStateChanged(object sender, StoveCounter.OnStateChangedEventArgs e) {
+        if (e.state == StoveCounter.State.Burned) {
+            musicInstance.setParameterByNameWithLabel("MusicState", "Chaos");
+        }
+    }
+
+    private void DeliveryManager_OnRecipeSuccess(object sender, System.EventArgs e) {
+        musicInstance.setParameterByNameWithLabel("MusicState", "Normal");
     }
 }

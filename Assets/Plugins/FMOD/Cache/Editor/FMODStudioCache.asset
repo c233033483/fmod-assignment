@@ -124,7 +124,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 639151739097918860
+  lastModified: 639151837228889928
   FileSizes: []
   Exists: 1
 --- !u!114 &-5692328996723138808
@@ -160,7 +160,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/food.bank
   Name: food
   StudioPath: bank:/food
-  lastModified: 639151506767561510
+  lastModified: 639151752441130478
   FileSizes: []
   Exists: 1
 --- !u!114 &-4540187011934189271
@@ -239,13 +239,14 @@ MonoBehaviour:
   - {fileID: 6031899684961637743}
   - {fileID: -7280163162196078329}
   - {fileID: 8853362690288427185}
+  - {fileID: 5332205070348767380}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3088126232041597045}
   StringsBanks:
   - {fileID: 5633745361532054882}
   cacheVersion: 131859
-  cacheTime: 639151739097918860
+  cacheTime: 639151860996258191
   SerializableEventsDict:
   - key: event:/Cooking Events/pan-sizzling
     index: 0
@@ -271,6 +272,8 @@ MonoBehaviour:
     index: 10
   - key: event:/New Event
     index: 11
+  - key: snapshot:/Backroom
+    index: 12
 --- !u!114 &784111150791251787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +368,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Player Sounds.bank
   Name: Player Sounds
   StudioPath: bank:/Player Sounds
-  lastModified: 639151526407550425
+  lastModified: 639151752441915302
   FileSizes: []
   Exists: 1
 --- !u!114 &2541344555332237852
@@ -410,7 +413,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639151735985600610
+  lastModified: 639151860996232808
   FileSizes: []
   Exists: 1
 --- !u!114 &3516758719035624798
@@ -474,23 +477,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/menu-music/Parameter 1
+  m_Name: parameter:/menu-music/MusicState
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: Parameter 1
+  Name: MusicState
   StudioPath: 
   Min: 0
-  Max: 2
-  Default: 0
+  Max: 3
+  Default: 1
   ID:
     data1: 129363464
     data2: 1110892569
   Type: 2
   IsGlobal: 0
   Labels:
+  - Title
   - Normal
   - Rush
   - Chaos
   Exists: 1
+--- !u!114 &5332205070348767380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Backroom
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: snapshot:/Backroom
+  Guid:
+    Data1: -1692819161
+    Data2: 1154932215
+    Data3: 1853452164
+    Data4: -1533012118
+  Banks:
+  - {fileID: 3088126232041597045}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5425003110866550163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,10 +564,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639151735985620609
+  lastModified: 639151860996258191
   FileSizes:
   - Name: 
-    Value: 1712
+    Value: 1966
   Exists: 1
 --- !u!114 &5935469480187720023
 MonoBehaviour:
@@ -612,7 +643,7 @@ MonoBehaviour:
   - {fileID: 4968935706533408984}
   MinDistance: 1
   MaxDistance: 20
-  Length: 99850
+  Length: 127175
 --- !u!114 &6447259957833893420
 MonoBehaviour:
   m_ObjectHideFlags: 0

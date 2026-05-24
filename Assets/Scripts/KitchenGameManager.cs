@@ -34,6 +34,8 @@ public class KitchenGameManager : MonoBehaviour {
         Instance = this;
 
         state = State.WaitingToStart;
+        
+        MusicManager.Instance.SetMusicState("Normal");
     }
 
     private void Start() {
@@ -69,6 +71,11 @@ public class KitchenGameManager : MonoBehaviour {
                 if (gamePlayingTimer < 0f) {
                     state = State.GameOver;
                     OnStateChanged?.Invoke(this, EventArgs.Empty);
+                }
+
+                if (gamePlayingTimer <= 20f)
+                {
+                    MusicManager.Instance.SetMusicState("Rush");
                 }
                 break;
             case State.GameOver:
